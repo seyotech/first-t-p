@@ -1,0 +1,23 @@
+nz-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 120px;
+    height: 31px;
+    margin: 16px 30px 16px 0;
+    float: left;
+}
+
+.logo img {
+    float: left;
+}
+
+.header-menu {
+    line-height: 64px;
+}
+
+
+

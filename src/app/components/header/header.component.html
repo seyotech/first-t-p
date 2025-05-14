@@ -1,0 +1,20 @@
+<nz-header>
+    <div class="logo">
+        <img src="../assets/images/logo.png" alt="">
+    </div>
+    <ul nz-menu nzTheme="dark" nzMode="horizontal" class="header-menu">
+        <li nz-menu-item nzSelected>
+            <app-cart><div class="cart">Cart<img src="../assets/images/cart.png" alt="" /></div></app-cart>
+        </li>
+        @if (user) {
+        <li nz-menu-item>
+            <div class="cart"><span></span><img src="../assets/images/avatar.png" alt="" /></div>
+        </li>
+        } @else {
+        <li nz-menu-item>
+            <div class="cart" routerlink="/sign-in">Login</div>
+        </li>
+        }
+    </ul>
+    
+</nz-header>

@@ -1,0 +1,13 @@
+<div class="cart" (click)="open()">Cart <img src="../../../assets/images/cart.png" alt="" />
+    <nz-badge [nzCount]="5">
+        <a class="head-example"></a>
+    </nz-badge>
+</div>
+<nz-drawer [nzClosable]="false" [nzVisible]="visible" nzPlacement="right" nzTitle="Basic Drawer" (nzOnClose)="close()">
+    <ng-container *nzDrawerContent>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+
+    </ng-container>
+</nz-drawer>
