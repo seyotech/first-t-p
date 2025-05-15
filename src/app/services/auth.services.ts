@@ -7,7 +7,7 @@ import { delay, Observable, of } from 'rxjs';
 export class AuthService {
 
   constructor() { }
-
+//   getAuthToken
   isLoggedIn(): Observable<boolean>{
     return of(true).pipe(delay(500))
   }

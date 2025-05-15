@@ -2,13 +2,16 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { authValidator } from '../validators/auth.validators';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { BrowserStorageService } from '../utils/storage.service';
 
 @Component({
   selector: 'app-sign-up',
   standalone: true,
   imports: [
     ReactiveFormsModule,
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.css'
@@ -16,7 +19,7 @@ import { CommonModule } from '@angular/common';
 export class SignUpComponent {
   regForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private localStorages: BrowserStorageService) {
     this.regForm = this.formBuilder.group({
       userName: ['', Validators.compose([Validators.required,
       Validators.minLength(3),
@@ -29,7 +32,7 @@ export class SignUpComponent {
   }
 
   signUp() {
-    console.log({ ...this.regForm.value }, this.regForm)
+    this.localStorages.set('user', JSON.stringify({...this.regForm.value}))
   }
 
 }

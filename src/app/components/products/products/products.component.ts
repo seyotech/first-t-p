@@ -2,14 +2,15 @@ import { Component, inject, OnInit } from '@angular/core';
 import { ProductService } from '../../../services/product.services';
 import { Product } from '../../../models/product.type';
 import { ProductComponent } from '../product/product.component';
-import { ActionsComponent } from '../actions/actions.component';
 import { HttpClient } from '@angular/common/http';
+import { TopbarComponent } from '../../topbar/topbar/topbar.component';
 
 @Component({
   selector: 'app-products',
   standalone: true,
   imports: [
     ProductComponent,
+    TopbarComponent,
   ],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'

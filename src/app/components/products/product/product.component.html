@@ -1,18 +1,12 @@
-<section  *ngFor="let product of products">
+<section *ngFor="let product of products">
     <div class="product-area">
         <div class="product-img">
-            <img
-            nz-image
-            width="200px"
-            height="200px"
-            [nzSrc]="product.thumbnail"
-            alt=""
-          />
+            <img nz-image width="200px" height="200px" [nzSrc]="product.thumbnail" alt="" />
         </div>
         <div class="product-details">
-            <h1>this is a product</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur voluptatem a, qui consectetur porro magnam at. Nisi ad ullam tempore?</p>
+            <h1>{{product.title}}</h1>
+            <p>{{product.description}}</p>
         </div>
     </div>
-    <product-actions></product-actions>
+    <product-actions [productId]="product.id"></product-actions>
 </section>

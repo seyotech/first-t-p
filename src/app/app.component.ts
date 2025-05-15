@@ -20,7 +20,7 @@ import { HomeComponent } from './components/home/home.component';
     NzLayoutModule, 
     NzMenuModule, 
     NzBreadCrumbModule,
-    HomeComponent
+    RouterOutlet,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

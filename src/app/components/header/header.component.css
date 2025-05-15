@@ -18,6 +18,9 @@ nz-header {
 .header-menu {
     line-height: 64px;
 }
+.header-menu a {
+    color: white;
+}
 
 
 

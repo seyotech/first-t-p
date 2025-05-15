@@ -11,6 +11,8 @@ import { NzCardModule } from 'ng-zorro-antd/card';
 import { ProductsComponent } from "../products/products/products.component";
 import { CategoriesComponent } from '../products/categories/categories.component';
 import { HeaderComponent } from '../header/header.component';
+import { SignInComponent } from '../auth/sign-in/sign-in.component';
+import { ProductDetailsComponent } from '../products/product-details/product-details.component';
 
 
 @Component({
@@ -22,12 +24,12 @@ import { HeaderComponent } from '../header/header.component';
         NzMenuModule,
         CommonModule,
         NzLayoutModule,
-        TopbarComponent, 
-        ProductsComponent,
+        TopbarComponent,
         NzBreadCrumbModule,
         ReactiveFormsModule,
         CategoriesComponent,
         HeaderComponent,
+        ProductDetailsComponent,
     ],
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.css']
